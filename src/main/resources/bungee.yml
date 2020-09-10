@@ -1,0 +1,5 @@
+name: WaterAnnouncer
+version: @version@
+author: Gadse
+main: me.gadse.waterannouncer.WaterAnnouncer
+description: Configurable announcements for BungeeCord networks

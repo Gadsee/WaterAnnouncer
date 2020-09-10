@@ -1,0 +1,44 @@
+# Identifier/Name of the announcement, define anything!
+example_global:
+  # Name of the server that this announcement should go to
+  # If server is ALL it will broadcast globally.
+  server: ALL
+  # Interval in seconds between messages
+  interval-in-seconds: 60
+  # If the messages should be sent randomly or in order
+  random: false
+  # The messages that are being sent
+  messages:
+    - "&cNormal message"
+    - "&#abcdefRGB &#fedcbamessage"
+    - '[{"text":"[","color":"light_purple","bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"hoverEvent":{"action":"show_text","contents":[{"text":"Click here for an invite to the Zuligen Discord!","color":"aqua","bold":false,"italic":true,"underlined":false,"strikethrough":false,"obfuscated":false}]},"clickEvent":{"action":"open_url","value":"https://discord.gg/W7d27Ky"}},{"text":"Z","color":"green","bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"hoverEvent":{"action":"show_text","contents":[{"text":"Click here for an invite to the Zuligen Discord!","color":"aqua","bold":false,"italic":true,"underlined":false,"strikethrough":false,"obfuscated":false}]},"clickEvent":{"action":"open_url","value":"https://discord.gg/W7d27Ky"}},{"text":"]","color":"light_purple","bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"hoverEvent":{"action":"show_text","contents":[{"text":"Click here for an invite to the Zuligen Discord!","color":"aqua","bold":false,"italic":true,"underlined":false,"strikethrough":false,"obfuscated":false}]},"clickEvent":{"action":"open_url","value":"https://discord.gg/W7d27Ky"}},{"text":"Please report bugs to the ","color":"aqua","bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"hoverEvent":{"action":"show_text","value":[{"text":"Click here for the Zuligen Discord invite link!","color":"aqua","bold":true,"italic":true,"underlined":false,"strikethrough":false,"obfuscated":false}]},"clickEvent":{"action":"open_url","value":"https://discord.gg/W7d27Ky"}},{"text":"#contact-staff","color":"blue","bold":false,"italic":true,"underlined":true,"strikethrough":false,"obfuscated":false,"hoverEvent":{"action":"show_text","value":[{"text":"Click here for the Zuligen Discord invite link!","color":"aqua","bold":true,"italic":true,"underlined":false,"strikethrough":false,"obfuscated":false}]},"clickEvent":{"action":"open_url","value":"https://discord.gg/W7d27Ky"}},{"text":"channel on our discord","color":"aqua","bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"hoverEvent":{"action":"show_text","value":[{"text":"Click here for the Zuligen Discord invite link!","color":"aqua","bold":true,"italic":true,"underlined":false,"strikethrough":false,"obfuscated":false}]},"clickEvent":{"action":"open_url","value":"https://discord.gg/W7d27Ky"}},{"text":"(Click here for a link)","color":"yellow","bold":false,"italic":true,"underlined":false,"strikethrough":false,"obfuscated":false,"hoverEvent":{"action":"show_text","value":[{"text":"Click here for the Zuligen Discord invite link!","color":"aqua","bold":true,"italic":true,"underlined":false,"strikethrough":false,"obfuscated":false}]},"clickEvent":{"action":"open_url","value":"https://discord.gg/W7d27Ky"}}]'
+example_single:
+  server: lobby
+  interval-in-seconds: 120
+  messages:
+    - "&7This is only sent to players on &flobby&7!"
+example_group:
+  # You can also use servers to define a list of servers instead of a single server
+  servers:
+    - lobby
+    - faction
+  interval-in-seconds: 120
+  messages:
+    - "&7This is only sent to players on &flobby&7 and &ffaction&7!"
+
+# MESSAGE CONFIGURATION
+messages:
+  prefix: "&b&lANNOUNCER &8&l» &7"
+  # %command% - The command that should show for this help
+  # %description% - The description of that command.
+  help: "&b%command% &f- &7%description%"
+
+  # %time% - The amount of time it took to reload (in milliseconds)
+  reload: "Configuration reloaded. (&f%time% &7ms)"
+
+  # %announcement_name%     - The name of the announcement
+  # %announcement_interval% - The interval of the announcement
+  # %announcement_server%   - The server of the announcement
+  announcement_start: "Announcement &f%announcement_name% &7started. (Every &e%announcement_interval%&7s)"
+  announcement_stop: "Announcement &f%announcement_name% &7stopped."
+  announcement_info: "&b%announcement_name% &7every &e%announcement_interval%&7s &7on &f%announcement_server%&7."
